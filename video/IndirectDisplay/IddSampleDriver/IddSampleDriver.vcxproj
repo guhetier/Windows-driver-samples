@@ -217,6 +217,9 @@
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies);OneCoreUAP.lib;avrt.lib</AdditionalDependencies>
     </Link>
+    <DriverSign>
+      <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -230,6 +233,9 @@
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies);OneCoreUAP.lib;avrt.lib</AdditionalDependencies>
     </Link>
+    <DriverSign>
+      <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -244,6 +250,9 @@
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies);OneCoreUAP.lib;avrt.lib</AdditionalDependencies>
     </Link>
+    <DriverSign>
+      <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -259,6 +268,9 @@
       <AdditionalDependencies>%(AdditionalDependencies);OneCoreUAP.lib;avrt.lib</AdditionalDependencies>
       <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
     </Link>
+    <DriverSign>
+      <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
+    </DriverSign>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -293,6 +305,7 @@
       <WppScanConfigurationData Condition="'%(ClCompile.ScanConfigurationData)' == ''">trace.h</WppScanConfigurationData>
       <ExceptionHandling>Async</ExceptionHandling>
       <EnablePREfast>true</EnablePREfast>
+      <AdditionalOptions>/DUMDF_DRIVER /DIDDCX_VERSION_MAJOR=1 /DIDDCX_VERSION_MINOR=6 /DIDDCX_MINIMUM_VERSION_REQUIRED=4 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies);OneCoreUAP.lib;avrt.lib</AdditionalDependencies>
@@ -305,6 +318,7 @@
       <WppScanConfigurationData Condition="'%(ClCompile.ScanConfigurationData)' == ''">trace.h</WppScanConfigurationData>
       <ExceptionHandling>Async</ExceptionHandling>
       <EnablePREfast>true</EnablePREfast>
+      <AdditionalOptions>/DUMDF_DRIVER /DIDDCX_VERSION_MAJOR=1 /DIDDCX_VERSION_MINOR=6 /DIDDCX_MINIMUM_VERSION_REQUIRED=4 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies);OneCoreUAP.lib;avrt.lib</AdditionalDependencies>
